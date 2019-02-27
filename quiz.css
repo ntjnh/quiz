@@ -1,0 +1,233 @@
+body {
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+}
+
+h1,
+h3 {
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 25px 0;
+    width: 85%;
+}
+
+.question {
+    padding: 10px 0;
+}
+
+.question-text {
+    margin-bottom: 10px;
+}
+
+.more-info {
+    background-color: #8abcff;
+    border: 2px solid #3e90ff;
+    color: #fff;
+    display: none;
+    font-size: .9em;
+    font-style: italic;
+    letter-spacing: .05em;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.choice {
+    padding: 5px 0;
+    position: relative;
+}
+
+.choice-text {
+    background-color: #ccc;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    padding: 10px 0 10px 40px;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.choice-text:hover,
+.choice-text--selected {
+    background-color: #3e90ff;
+    color: #fff;
+}
+
+.choice-text--selected-correct,
+.choice-text--selected-correct:hover {
+    background-color: #32cd32;
+    color: #fff;
+}
+
+.choice-text--selected-incorrect,
+.choice-text--selected-incorrect:hover {
+    background-color: #cf2727;
+    color: #fff;
+}
+
+/* Hide default radio button */
+.choice-text .choice-radio {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+/* Custom radio button */
+.choice-selected {
+    background-color: #fff;
+    border-radius: 50%;
+    height: 22px;
+    left: 10px;
+    position: absolute;
+    top: 9px;
+    width: 22px;
+}
+
+/* Radio button on hover */
+.choice-text:hover .choice-radio ~ .choice-selected {
+  background-color: #fff;
+}
+
+/* Checked radio button */
+.choice-text .choice-radio:checked ~ .choice-selected {
+  background-color: #000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.choice-selected:after {
+  content: "";
+  display: none;
+  position: absolute;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.choice-text .choice-radio:checked ~ .choice-selected:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.choice-text .choice-selected:after {
+    background-color: #fff;
+    border-radius: 50%;
+    left: 7px;
+    height: 8px;
+    top: 7px;
+    width: 8px;
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.submit {
+    background-color: #32cd32;
+    color: #fff;
+}
+
+.restart-b {
+    margin-left: 10px;
+}
+
+.restart-b,
+.submit {
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+/* ===== Results Modal ===== */
+.results-wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.results-content {
+    background-color: #3e90ff;
+    color: #fff;
+    height: 300px;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #fff;
+    width: 70%;
+}
+
+.close {
+    float: right;
+    font-size: 32px;
+    line-height: 18px;
+    text-align: right;
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
+.results-heading {
+    border-bottom: 1px solid #fff;
+    font-weight: normal;
+    letter-spacing: .1em;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.actions {
+    margin-top: 32px;
+    padding-left: 0;
+}
+
+.actions li {
+    display: inline;
+    list-style: none;
+    padding-right: 10px;
+}
+
+.actions li button {
+    font-size: .9em;
+    padding: 10px;
+}
+
+.answers {
+    background-color: #fff;
+    color: #3e90ff;
+}
+
+.restart {
+    background-color: #000;
+    color: #fff;
+}
+
+.blur {
+    filter: blur(4px);
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.disabled,
+.disabled:hover,
+.submit:disabled {
+    background-color: #ccc;
+    color: #aaa;
+}
+
+/* ===== Media Queries ===== */
+@media (min-width: 993px) {
+    .results-content {
+        width: 50%;
+    }
+}
