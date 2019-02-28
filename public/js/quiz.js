@@ -1,9 +1,7 @@
 let quizLength = 20;
 
 const getQuiz = fetch(`https://opentdb.com/api.php?amount=${quizLength}&type=multiple`)
-                .then(function(blob) {
-                    return blob.json();
-                })
+                .then(blob => blob.json)
                 .then(function(results) {
                     const quizData = results.results;
                     quiz(quizData);
