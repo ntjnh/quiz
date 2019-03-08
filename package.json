@@ -10,8 +10,6 @@
   "author": "Nate Jonah <nate@natejonah.com>",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4",
-    "express-react-views": "^0.11.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4"
   },
