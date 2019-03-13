@@ -7,7 +7,7 @@ const transpile = () => {
             presets: ['@babel/env', '@babel/react'],
             plugins: ['transform-react-jsx']
         }))
-        .pipe(dest('public/js'));
+        .pipe(dest('src/js'));
 };
 
 exports.default = series(transpile);
