@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d public",
     "start": "node app.js"
   },
   "author": "Nate Jonah <nate@natejonah.com>",
