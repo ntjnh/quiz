@@ -7,4 +7,6 @@ app.get("/", (req, res) => res.sendFile(path.resolve(__dirname + "/public/index.
 
 app.get('/index-jsx/', (req, res) => res.sendFile(path.resolve(__dirname + '/public/bundle.js')));
 
+app.get('/styles/', (req, res) => res.sendFile(path.resolve(__dirname + '/public/css/quiz.css')));
+
 app.listen(port, () => console.log(`Server is running at http://localhost:${port}...`));
