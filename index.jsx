@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div>
                 <h1 id="title">Quiz</h1>
 
                 {/* Questions Component */}
