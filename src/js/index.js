@@ -38,9 +38,7 @@ function (_React$Component) {
   _createClass(App, [{
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {
-        className: "container"
-      }, _react.default.createElement("h1", {
+      return _react.default.createElement("div", null, _react.default.createElement("h1", {
         id: "title"
       }, "Quiz"));
     }
